@@ -1,0 +1,30 @@
+﻿<Window x:Name="osnovaaplikacije" x:Class="PolicijskaStanica.OsnovaAplikacije"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OsnovaAplikacije" Height="495" Width="793" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="osnovaaplikacije_Loaded">
+    <Grid x:Name="Grida" Height="469" Width="788" >
+        <Grid.Background>
+            <ImageBrush ImageSource="Slike/pozadina1.jpg">
+                <ImageBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ImageBrush.RelativeTransform>
+            </ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="Dodaj_korisnika" Content="Dodaj korisnika" HorizontalAlignment="Left" Height="41" Margin="36,392,0,0" VerticalAlignment="Top" Width="115" Click="Dodaj_korisnika_Click"/>
+        <Button x:Name="Dodaj_osumnjicenog" Content="Dodaj osumnjičenog" HorizontalAlignment="Left" Height="41" Margin="156,392,0,0" VerticalAlignment="Top" Width="115" Click="Dodaj_osumnjicenog_Click"/>
+        <Button x:Name="Lista_korisnika" Content="Lista korisnika" HorizontalAlignment="Left" Height="41" Margin="276,392,0,0" VerticalAlignment="Top" Width="115" Click="Lista_korisnika_Click"/>
+        <Button x:Name="Lista_osumnjicenih" Content="Lista osumnjičenih" HorizontalAlignment="Left" Height="41" Margin="396,392,0,0" VerticalAlignment="Top" Width="115" Click="Lista_osumnjicenih_Click"/>
+        <Button x:Name="Obrisi_korisnika" Content="Obriši korisnika" HorizontalAlignment="Left" Margin="516,392,0,36" Width="115"/>
+        <Button x:Name="Obrisi_osumnjicenog" Content="Obriši osumnjičenog" HorizontalAlignment="Left" Height="41" Margin="636,392,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="sat" Content="" HorizontalAlignment="Left" Height="83" Margin="275,24,0,0" VerticalAlignment="Top" Width="238" Foreground="#FFEEF7F7" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" FontSize="57" FontWeight="Bold"/>
+    </Grid>
+</Window>

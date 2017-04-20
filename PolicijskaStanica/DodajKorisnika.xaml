@@ -1,0 +1,50 @@
+﻿<Window x:Name="DodajKorisnika1" x:Class="PolicijskaStanica.DodajKorisnika"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DodajKorisnika" Height="605" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Slike/images.jpg"/>
+        </Grid.Background>
+        <GroupBox Header="Unos novog korisnika" HorizontalAlignment="Left" Height="331" Margin="130,70,0,0" VerticalAlignment="Top" Width="526" Foreground="White" FontSize="15">
+            <Grid HorizontalAlignment="Left" Height="305" Margin="0,10,-2,-10" VerticalAlignment="Top" Width="516">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="75*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="Prezime" Height="32" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"  HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="White" Foreground="White" LostFocus="Prezime_LostFocus" MouseLeave="Prezime_MouseLeave" Grid.Column="2"/>
+                <TextBox x:Name="Username" Height="32" Margin="0,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="White" Foreground="White" LostFocus="Username_LostFocus" MouseLeave="Username_MouseLeave" Grid.Column="2"/>
+                <TextBox x:Name="Sifra" Height="32" Margin="0,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="White" Foreground="White" LostFocus="Sifra_LostFocus" MouseLeave="Sifra_MouseLeave" Grid.Column="2"/>
+                <TextBox x:Name="Ime" Height="32" Margin="0,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="White" Foreground="White" LostFocus="Ime_LostFocus" MouseLeave="Ime_MouseLeave" Grid.Column="2"/>
+                <Label Content="Ime:" HorizontalAlignment="Left" Height="33" Margin="161,16,0,0" VerticalAlignment="Top" Width="39" Foreground="White" RenderTransformOrigin="0.479,0.703" Background="{x:Null}"/>
+                <Label Content="Prezime:" HorizontalAlignment="Left" Height="33" Margin="132,69,0,0" VerticalAlignment="Top" Width="68" Foreground="White" RenderTransformOrigin="0.512,0.453" Background="{x:Null}"/>
+                <Label Content="username:" HorizontalAlignment="Left" Height="33" Margin="120,122,0,0" VerticalAlignment="Top" Width="80" Foreground="White" RenderTransformOrigin="0.479,0.703" Background="{x:Null}"/>
+                <Label Content="sifra:" HorizontalAlignment="Left" Height="33" Margin="155,0,0,97" VerticalAlignment="Bottom" Width="45" Foreground="White" RenderTransformOrigin="0.479,0.703" Background="{x:Null}"/>
+                <TextBox x:Name="ID" Height="32" Margin="0,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="White" Foreground="White" LostFocus="ID_LostFocus" MouseLeave="ID_MouseLeave" Grid.Column="2"/>
+                <Label Content="ID:" HorizontalAlignment="Left" Height="33" Margin="169,228,0,0" VerticalAlignment="Top" Width="31" Foreground="White" RenderTransformOrigin="0.479,0.703" Background="{x:Null}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Ovlastenje:" HorizontalAlignment="Left" Margin="130,401,0,0" VerticalAlignment="Top" Width="526" Height="66" Foreground="White" FontSize="15">
+            <Grid HorizontalAlignment="Left" Margin="0,0,-2,-4" Width="516">
+                <RadioButton x:Name="Administrator" Content="Administrator" HorizontalAlignment="Left" Margin="25,13,0,0" VerticalAlignment="Top" IsChecked="True" Foreground="White" Width="126" Height="26" RenderTransformOrigin="0.5,0.5"></RadioButton>
+                <RadioButton x:Name="VisiCin" Content="Visi Cin Inspektora" HorizontalAlignment="Left" Height="26" Margin="167,13,0,0" VerticalAlignment="Top" Width="158" Foreground="White"/>
+                <RadioButton x:Name="NiziCin" Content="Nizi Cin Inspektora" HorizontalAlignment="Left" Margin="348,13,0,0" VerticalAlignment="Top" Foreground="White" Width="158" Height="26"/>
+            </Grid>
+
+        </GroupBox>
+        <Button x:Name="Dodaj" Content="Dodaj" HorizontalAlignment="Left" Height="40" Margin="176,495,0,0" VerticalAlignment="Top" Width="165" FontSize="15" Click="Dodaj_Click"/>
+        <Button x:Name="Nazad" Content="Nazad" HorizontalAlignment="Left" Height="40" Margin="444,495,0,0" VerticalAlignment="Top" Width="165" FontSize="15" Click="Nazad_Click"/>
+        <StatusBar HorizontalAlignment="Left" Height="33" Margin="0,540,0,0" VerticalAlignment="Top" Width="794" Background="{x:Null}">
+            <Label x:Name="status" Content="Čekanje unosa podataka..." Height="32" Width="388" Foreground="White" RenderTransformOrigin="0.495,0.344"/>
+        </StatusBar>
+
+
+    </Grid>
+</Window>

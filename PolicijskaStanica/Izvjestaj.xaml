@@ -1,0 +1,34 @@
+﻿<Window x:Class="PolicijskaStanica.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Prijava" Height="605" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Slike/images.jpg"/>
+        </Grid.Background>
+        <Button Content="Pošalji" HorizontalAlignment="Left" Height="40" Margin="425,485,0,0" VerticalAlignment="Top" Width="165" FontSize="15" Click="Button_Click_1"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Height="40" Margin="195,485,0,0" VerticalAlignment="Top" Width="165" FontSize="15" Click="Button_Click"/>
+        <GroupBox Header="Unos podataka:" HorizontalAlignment="Left" Margin="130,32,0,0" VerticalAlignment="Top" Height="240" Width="526" Foreground="White" FontSize="15">
+            <Grid HorizontalAlignment="Right" Height="215" VerticalAlignment="Top" Width="516" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="Ime" HorizontalAlignment="Left" Height="44" Margin="293,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Background="{x:Null}" Foreground="White"/>
+                <TextBox x:Name="Prezime" HorizontalAlignment="Left" Height="44" Margin="293,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Background="{x:Null}" Foreground="White"/>
+                <TextBox x:Name="Podnosioc" HorizontalAlignment="Left" Height="44" Margin="293,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Background="{x:Null}" Foreground="White"/>
+                <Label Content="Prezime dežurnog inspektora:" HorizontalAlignment="Left" Height="44" Margin="52,87,0,0" VerticalAlignment="Top" Width="209" Foreground="White"/>
+                <Label Content="Ime dežurnog inspektora:" HorizontalAlignment="Left" Height="44" Margin="77,26,0,0" VerticalAlignment="Top" Width="184" Foreground="White"/>
+                <Label Content="Ime i prezime podnosioca:" HorizontalAlignment="Left" Height="44" Margin="73,147,0,0" VerticalAlignment="Top" Width="188" Foreground="White"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Izvještaj" HorizontalAlignment="Left" Height="170" Margin="130,284,0,0" VerticalAlignment="Top" Width="526" Foreground="White" FontSize="15">
+            <Grid HorizontalAlignment="Left" Height="147" VerticalAlignment="Top" Width="516" >
+                <TextBox x:Name="Izvjestaj" HorizontalAlignment="Left" Height="147" TextWrapping="Wrap" VerticalAlignment="Top" Width="516" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+            </Grid>
+        </GroupBox>
+        <StatusBar HorizontalAlignment="Left" Height="32" Margin="0,544,0,0" VerticalAlignment="Top" Width="794" Background="{x:Null}" Foreground="White">
+            <Label Content="Čekanje unosa podataka..." Height="32" Width="327" Foreground="White"/>
+        </StatusBar>
+
+    </Grid>
+</Window>
